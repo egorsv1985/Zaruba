@@ -1,0 +1,16 @@
+.box-border{
+	@include wh(55px);
+    padding: 1px;
+    background: linear-gradient(
+      47.45deg,
+      #ffffff 13.8%,
+      rgba(255, 255, 255, 0) 87.06%
+    );
+    border-radius: 50%;
+}
+.box-circle{
+	background: $mainColor;
+    border-radius: 50%;
+    @include wh(53px);
+	
+}

@@ -1,0 +1,213 @@
+@use "sass:math";
+
+// Подключение миксинов ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+//&display=swap - добавить при подключении через плагин
+// Подключить если есть локальные файлы шрифтов
+@import "fonts/fonts";
+
+// Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
+// Подключить если есть файл иконочного шрифта
+// @import "fonts/icons";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: "Montserrat";
+$fontSize: rem(16); // где 20(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #05c3de;
+$accentColor: #0d0d0d;
+$secondColor: #fff;
+$thirdColor: #222224;
+$successColor: #e2e6ee;
+$textMainColor: #fff;
+$textAccentColor: #222224;
+$textSuccessColor: #e2e6ee;
+$textSecondColor: #05c3de;
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1400;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1160;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em(
+  $containerWidth
+); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+$grid_breakpoints: (
+  xs: 0,
+  sm: 575px,
+  md: 767px,
+  lg: 991px,
+  xl: 1199px,
+  xxl: 1699px,
+);
+
+// Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+
+@import "./libs/custom";
+
+@import "base/null";
+
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  // Прижимаем footer
+  > main {
+    flex: 1 1 auto;
+  }
+
+  // Фикс для слайдеров
+  > * {
+    min-width: 0;
+  }
+}
+
+// Ограничивающий контейнер ======================================================================================================================================================================================================================
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+@if ($responsiveType==1) {
+  // Отзывчивая
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+} @else {
+  // По брейк-поинтам
+  [class*="__container"] {
+    margin: 0 auto;
+
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+
+    // @media (max-width: $pc) {
+    //   max-width: rem(970);
+    // }
+
+    // @media (max-width: $tablet) {
+    //   max-width: rem(750);
+    // }
+
+    // @media (max-width: $mobile) {
+    //   max-width: none;
+
+    //   @if ($containerPadding>0 and $maxWidthContainer>0) {
+    //     padding: 0 rem(math.div($containerPadding, 2));
+    //   }
+    // }
+  }
+}
+picture {
+  width: 100%;
+  height: 100%;
+}
+.img {
+  width: 100%;
+  padding: 0 10px;
+}
+// Подключение стилей общих элементов проекта
+@import "common";
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// components
+
+@import "./components/burger";
+// @import "./libs/swiper";
+
+// @import "./components/social";
+// @import "./components/scroll-header";
+@import "./blocks/box-border";
+// sections
+@import "./sections/promo";
+@import "./sections/contacts";
+
+// main-pages
+
+@import "./sections/promo-main";
+@import "./sections/about";
+@import "./sections/halls";
+@import "./sections/services";
+@import "./sections/cafe";
+@import "./sections/infrastructure";
+@import "./sections/social-project";
+@import "./sections/forms";
+
+// services-page
+@import "./sections/promo-services";
+@import "./sections/programs";
+@import "./sections/trends";
+
+// cards-page
+@import "./sections/promo-cards";
+@import "./sections/cards";
+
+// shedule-page
+@import "./sections/promo-shedule";
+@import "./sections/shedule";
+
+// contacts-page
+@import "./sections/promo-contacts";
+@import "./sections/map";
+
+// team-page
+@import "./sections/promo-team";
+@import "./sections/team";
+
+// about-page
+@import "./sections/promo-about";
+@import "./sections/advantages";
+@import "./sections/team-about";
+@import "./sections/vacansies";
+
+@import "./components/popup";
+
+// block
+@import "header";
+@import "footer";
+// @import "./blocks/nav";
+// @import "./blocks/logo";
+@import "./blocks/open-burger";
+

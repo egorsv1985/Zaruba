@@ -1,0 +1,50 @@
+.footer {
+  padding: 40px 0;
+
+  // .footer__social-list
+  &__social-list {
+    max-width: 60px;
+  }
+  // .footer__social-item
+  &__social-item {
+    @include wh(25px);
+
+    background-color: $thirdColor;
+  }
+
+  // .footer__box
+  &__box {
+    padding-left: 36px;
+    position: relative;
+    @include media(max, sm) {
+      padding-left: 0;
+    }
+    &::before {
+      @include pseudo;
+      @include wh(15px);
+      position: absolute;
+      left: 0;
+      top: 30%;
+      transform: translateY(-50%);
+      @include media(max, sm) {
+        display: none;
+      }
+    }
+    &--map {
+      &::before {
+        @include background(url("@img/icons/map.svg"));
+      }
+    }
+
+    &--time {
+      &::before {
+        @include background(url("@img/icons/time.svg"));
+      }
+    }
+    &--tel {
+      &::before {
+        @include background(url("@img/icons/tel.svg"));
+      }
+    }
+  }
+}
