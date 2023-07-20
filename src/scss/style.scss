@@ -16,16 +16,8 @@
 $fontFamily: "Montserrat";
 $fontSize: rem(16); // где 20(px) - размер шрифта по умолчанию из макета
 
-// Основные цвета
-$mainColor: #05c3de;
-$accentColor: #0d0d0d;
-$secondColor: #fff;
-$thirdColor: #222224;
-$successColor: #e2e6ee;
-$textMainColor: #fff;
-$textAccentColor: #222224;
-$textSuccessColor: #e2e6ee;
-$textSecondColor: #05c3de;
+
+
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -161,46 +153,11 @@ picture {
 // @import "./components/scroll-header";
 @import "./blocks/box-border";
 // sections
-@import "./sections/promo";
-@import "./sections/contacts";
 
-// main-pages
+// @import "./sections/contacts";
 
-@import "./sections/promo-main";
-@import "./sections/about";
-@import "./sections/halls";
-@import "./sections/services";
-@import "./sections/cafe";
-@import "./sections/infrastructure";
-@import "./sections/social-project";
-@import "./sections/forms";
 
-// services-page
-@import "./sections/promo-services";
-@import "./sections/programs";
-@import "./sections/trends";
 
-// cards-page
-@import "./sections/promo-cards";
-@import "./sections/cards";
-
-// shedule-page
-@import "./sections/promo-shedule";
-@import "./sections/shedule";
-
-// contacts-page
-@import "./sections/promo-contacts";
-@import "./sections/map";
-
-// team-page
-@import "./sections/promo-team";
-@import "./sections/team";
-
-// about-page
-@import "./sections/promo-about";
-@import "./sections/advantages";
-@import "./sections/team-about";
-@import "./sections/vacansies";
 
 @import "./components/popup";
 
