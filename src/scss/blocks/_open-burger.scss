@@ -1,16 +1,8 @@
 .open {
   .header {
-    
-   &__menu{
-    left: 0;
-    background: rgba(13, 13, 13, 0.9);
-   }
-&__list{
-  gap: 20px;
-}
-  
+    &__menu {
+      left: 0;
+      background: rgba(13, 13, 13, 0.9);
+    }
   }
-
-  
-
 }
