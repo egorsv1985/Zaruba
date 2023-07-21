@@ -1,15 +1,15 @@
-.promo{
-	background: url("@img/icons/lightning.svg") no-repeat left / 50% auto;
-	&__slide{
-		background: url("@img/strong-wet-woman-posing-during-jump.png") no-repeat center / 50% auto;
-	}
-	span{
-		background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      text-fill-color: transparent; 
-      
-	  -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #FAED19;
-	}
+.promo {
+  background: url("../img/icons/lightning.svg") no-repeat -140px 90%/52% auto;
+  &__slide {
+    background: url("../img/strong-wet-woman-posing-during-jump.png") no-repeat
+      40px center/52% auto;
+    padding-top: 90px;
+    padding-bottom: 280px;
+  }
+  .counter {
+    background: linear-gradient(190deg, #faed19, #faed1900);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px transparent;
+  }
 }

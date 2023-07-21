@@ -1,0 +1,72 @@
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 100;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background-color: #fff;
+  @include wh(30px);
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: #faed19;
+  }
+  &::after {
+    @include pseudo;
+
+    @include wh(15px);
+    @include background(url("@img/icons/arrow.svg"));
+  }
+}
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-prev {
+  @include media(max, 1380px) {
+  }
+  @include media(max, sm) {
+  }
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-next {
+  @include media(max, 1380px) {
+  }
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  @include wh(10px);
+  background: #fff;
+  border-radius: 0;
+  opacity: 0.8;
+  &:hover {
+    background: #faed19;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 10%;
+    left: 6%;
+}
+
+
+.swiper-pagination-bullet {
+  &-active {
+    background: #faed19;
+  }
+}
+
+.swiper-control {
+  right: 21%;
+  top: 12%;
+  width: 25%;
+  @include media(max, 1380px) {
+  }
+}
