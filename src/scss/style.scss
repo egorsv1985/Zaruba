@@ -70,6 +70,7 @@ $grid_breakpoints: (
   // Прижимаем footer
   > main {
     flex: 1 1 auto;
+    padding-top: 163px;
   }
 
   // Фикс для слайдеров
@@ -143,6 +144,9 @@ picture {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+
+// sections
+@import "./sections/_promo";
 
 // components
 

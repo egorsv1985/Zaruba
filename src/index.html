@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Главная" })
 
@@ -6,14 +6,11 @@
     <div class="wrapper">
       @@include('html/_header.htm',{})
       <main>
-       
-        
-       
+        <div class="container">@@include('html/section/_promo.html')</div>
       </main>
 
       @@include('html/_footer.htm',{})
     </div>
-    @@include('html/_popup.htm',{})
-     @@include('html/_js.htm',{})
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
   </body>
 </html>
