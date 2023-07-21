@@ -3,63 +3,62 @@
 .fs-12 {
   font-size: 12px;
 }
-.fs-14{
+.fs-14 {
   font-size: 14px;
 }
 .fs-15 {
   font-size: 15px;
 }
-.fs-16{
- font-size: 16px;
+.fs-16 {
+  font-size: 16px;
 }
-.fs-20{
+.fs-20 {
   font-size: 20px;
 }
-.fs-70{
+.fs-45 {
+  font-size: 45px;
+}
+.fs-70 {
   font-size: 70px;
 }
 .ls-7 {
   letter-spacing: 0.78px;
 }
-.ls-9{
+.ls-9 {
   letter-spacing: 0.91px;
 }
 .fw-500 {
   font-weight: 500;
 }
-.fw-600{
+.fw-600 {
   font-weight: 600;
 }
-.fw-700{
+.fw-700 {
   font-weight: 700;
 }
-.fw-800{
+.fw-800 {
   font-weight: 800;
 }
-.fw-900{
+.fw-900 {
   font-weight: 900;
 }
 .lh-12 {
-  line-height: 120%; 
+  line-height: 120%;
 }
 
-
-
-
-.btn{
+.btn {
   transform: skew(-15deg);
-  span{
+  span {
     transform: skew(15deg);
   }
 }
-.btn--enter{
+.btn--enter {
   transform: none;
   background: url("@img/icons/user.svg") no-repeat left center/ 16px 18px;
-  @include media (min, lg) {
+  @include media(min, lg) {
     background-position: 20px center;
   }
-  span{
+  span {
     transform: none;
-  
   }
 }
