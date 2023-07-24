@@ -1,0 +1,30 @@
+.gallery {
+	padding-bottom: 150px;
+  &::after,
+  &::before {
+    @include pseudo;
+    @include wh(100%);
+    position: absolute;
+    
+    top: 0;
+    background-color: #fff;
+  }
+  &::after{
+	left: 99%;
+  }
+  &::before{
+	right: 99%;
+  }
+  &__text {
+    background: url("@img/icons/chat.svg") no-repeat center / cover;
+	bottom: 10%;
+	right: 15%;
+	max-width: 200px;
+  }
+  .swiper-control{
+	top: 50%;
+	right: 0;
+	left: 0;
+	width: 100%;
+  }
+}
