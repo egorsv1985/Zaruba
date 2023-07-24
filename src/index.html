@@ -5,9 +5,11 @@
   <body class="bg-black">
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main>
+      <main class="position-relative">
         @@include('html/section/_promo.html')
-        <div class="container">
+        <img src="@img/chain.png" alt="цепь" class="img__chain">
+        <div class="container position-relative">
+          
           @@include('html/section/_advantages.html')
         </div>
       </main>

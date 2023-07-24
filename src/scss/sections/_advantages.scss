@@ -1,0 +1,13 @@
+.advantages{
+	
+    position: relative;
+    top: -30rem;
+	&__title{
+		max-width: 650px;
+		margin: 0 auto 75px;
+	}
+	&__description{
+		max-width: 250px;
+		margin: 0 auto;
+	}
+}
