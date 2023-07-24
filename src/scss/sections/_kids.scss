@@ -1,0 +1,26 @@
+.kids {
+  &::after,
+  &::before {
+    @include pseudo;
+    @include wh(100%);
+    position: absolute;
+
+    top: 0;
+    background-color: #faed19;
+  }
+  &::after {
+    left: 99%;
+  }
+  &::before {
+    right: 99%;
+  }
+  &__box-text{
+padding: 120px 28px;
+max-width: 350px;
+margin: 0 auto;
+  }
+  &__title{
+	max-width: 300px;
+	margin: 0 auto;
+  }
+}
