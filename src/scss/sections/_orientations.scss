@@ -1,0 +1,66 @@
+.orientations {
+  padding-top: 235px;
+  &__title {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  &__box {
+    padding-bottom: 135px;
+  }
+  &__box-img {
+    &::before {
+      @include pseudo;
+      background: url("@img/icons/lightning.svg") no-repeat center / cover;
+      position: absolute;
+      @include wh(470px, 360px);
+    }
+    &--first {
+      &::before {
+        left: -22%;
+        top: 19%;
+      }
+      img {
+        left: -20%;
+      }
+    }
+    &--second {
+      &::before {
+        right: -5%;
+        top: 13%;
+      }
+      img {
+        right: -5%;
+      }
+    }
+  }
+  &__box-text {
+    &:nth-child(3) {
+      left: 25%;
+      top: 7%;
+    }
+    &:nth-child(4) {
+      left: 50%;
+      top: 27%;
+    }
+    &:nth-child(5) {
+      left: 75%;
+      top: 14%;
+    }
+    &:nth-child(6) {
+		left: 33%;
+		bottom: 40%;
+    }
+    &:nth-child(7) {
+		left: 58%;
+		bottom: 21%;
+    }
+    &:nth-child(8) {
+		left: 42%;
+		bottom: 12%;
+    }
+    &:nth-child(9) {
+		left: 8%;
+		bottom: 13%;
+    }
+  }
+}
