@@ -1,4 +1,7 @@
 .kids {
+  padding-top: 340px;
+  padding-bottom: 180px;
+
   &::after,
   &::before {
     @include pseudo;
@@ -14,13 +17,74 @@
   &::before {
     right: 99%;
   }
-  &__box-text{
-padding: 120px 28px;
-max-width: 350px;
-margin: 0 auto;
+  &__box-text {
+    padding: 120px 28px;
+    max-width: 350px;
+    margin: 0 auto;
   }
-  &__title{
-	max-width: 300px;
-	margin: 0 auto;
+  &__title {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  &__circle {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 83%;
+
+    margin: 0 auto;
+  }
+  &__circle1 {
+    height: 920px;
+  }
+  &__circle2 {
+    height: 700px;
+    width: 76%;
+  }
+  &__circle3 {
+    height: 500px;
+    width: 72%;
+  }
+  &__item {
+    &:nth-child(2) {
+      top: 10%;
+      left: -2%;
+    }
+    &:nth-child(3) {
+      top: 4%;
+      left: 33%;
+    }
+    &:nth-child(4) {
+      top: 4%;
+      left: 69%;
+    }
+    &:nth-child(5) {
+      top: 62%;
+      left: 78%;
+    }
+    &:nth-child(6) {
+      top: 80%;
+      left: 45%;
+    }
+    &:nth-child(7) {
+      top: 82%;
+      left: 9%;
+    }
+    &:nth-child(8) {
+      top: 55%;
+      left: 16%;
+    }
+    &:nth-child(9) {
+      top: 47%;
+      left: -8%;
+    }
+  }
+  &__text {
+    max-width: 230px;
+  }
+  &__box-img {
+    &--girl {
+      top: 61%;
+      right: -5%;
+      transform: translateY(-50%);
+    }
   }
 }

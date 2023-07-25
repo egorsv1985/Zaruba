@@ -23,7 +23,11 @@
   &__item {
     &--rotate {
       transform: rotate(-15deg);
+      &>*{
+        transform: rotate(15deg);
+      }
     }
+
   }
   &__box {
     padding-top: 35px;
