@@ -1,0 +1,24 @@
+.offers {
+  padding-top: 200px;
+  padding-bottom: 180px;
+
+  &::after,
+  &::before {
+    @include pseudo;
+    @include wh(100%);
+    position: absolute;
+
+    top: 0;
+    background-color: #fff;
+  }
+  &::after {
+    left: 99%;
+  }
+  &::before {
+    right: 99%;
+  }
+  &__title {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
