@@ -1,0 +1,9 @@
+.community{
+	padding-top: 130px;
+	&__text{
+		max-width: 350px;
+	}
+	&__bg{
+		background: url("@img/phone.png") no-repeat 35% 16% / 285px 271px;
+	}
+}
