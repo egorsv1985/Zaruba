@@ -1,4 +1,14 @@
 .footer {
+  &__btn{
+		&::before{
+			@include pseudo;
+			background: url("@img/icons/arrow-right.svg") no-repeat center / cover;
+			position: absolute;
+			right: 0;
+			top: 0;
+			@include wh(24px);
+		}
+	}
   padding: 40px 0;
 
   // .footer__social-list

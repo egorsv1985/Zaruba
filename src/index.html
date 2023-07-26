@@ -5,24 +5,19 @@
   <body class="bg-black">
     <div class="wrapper">
       @@include('html/_header.htm',{})
+      
       <main class="position-relative">
         @@include('html/section/_promo.html')
-        <img src="@img/chain.png" alt="цепь" class="img__chain">
-        <div class="container position-relative">
-          
-          @@include('html/section/_advantages.html')
-          @@include('html/section/_gallery.html')
-          @@include('html/section/_cards.html')
-          @@include('html/section/_orientations.html')
-          @@include('html/section/_kids.html')
-          @@include('html/section/_teams.html')
-          @@include('html/section/_offers.html')
-          @@include('html/section/_community.html')
-          @@include('html/section/_services.html')
-          @@include('html/section/_contacts.html')
-        </div>
+        @@include('html/section/_advantages.html')
+        @@include('html/section/_gallery.html')
+        @@include('html/section/_cards.html')
+        @@include('html/section/_orientations.html')
+        @@include('html/section/_kids.html')
+        @@include('html/section/_teams.html')
+        @@include('html/section/_offers.html')
+        @@include('html/section/_community.html')
+        @@include('html/section/_services.html')
       </main>
-
       @@include('html/_footer.htm',{})
     </div>
     @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})

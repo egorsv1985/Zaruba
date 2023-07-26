@@ -1,4 +1,4 @@
-<section class="gallery bg-white py-5 position-relative">
+<section class="gallery bg-white py-5 position-relative" id="gallery">
   <div
     class="fs-45 fw-900 fst-italic text-uppercase lh-12 text-center text-black"
   >
@@ -22,7 +22,8 @@
           />
         </div>
 
-        <span class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3 "
+        <span
+          class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3"
           >Порхай, как бабочка. Жаль, как пчела</span
         >
       </div>
@@ -35,9 +36,10 @@
           />
         </div>
 
-		<span class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3 "
-		>Порхай, как бабочка. Жаль, как пчела</span
-	  >
+        <span
+          class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3"
+          >Порхай, как бабочка. Жаль, как пчела</span
+        >
       </div>
       <div class="swiper-slide gallery__slide position-relative">
         <div class="d-block">
@@ -48,7 +50,8 @@
           />
         </div>
 
-        <span class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3 "
+        <span
+          class="gallery__text d-block fw-500 fs-16 lh-12 text-black position-absolute p-3"
           >Порхай, как бабочка. Жаль, как пчела</span
         >
       </div>
@@ -75,6 +78,28 @@
 <script>
   // Создаем новый Swiper объект для элемента ".gallerySwiper"
   var gallerySwiper = new Swiper(".gallerySwiper", {
+    effect: "fade",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    effect: "coverflow",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 150,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+      scale: 1,
+    },
+    observer: true,
+    observeParents: true,
+    spaceBetween: 0,
+    autoHeight: true,
+    speed: 800,
     // Задаем количество слайдов, которые будут показываться одновременно
     slidesPerView: 1,
     loop: true,
