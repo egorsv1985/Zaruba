@@ -70,7 +70,7 @@
 }
 .btn--enter {
   transform: none;
-  background: url("@img/icons/user.svg") no-repeat left center/ 16px 18px;
+  background: url("@img/icons/user.svg") no-repeat left center/ auto;
   @include media(min, lg) {
     background-position: 20px center;
   }
@@ -82,5 +82,5 @@
   background: linear-gradient(190deg, #faed19, #faed1900);
   background-size: 100% 100%;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 2px transparent;
+  -webkit-text-stroke: 6px transparent;
 }

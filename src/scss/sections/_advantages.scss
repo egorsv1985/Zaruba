@@ -1,13 +1,16 @@
-.advantages{
-	
-    position: relative;
-    top: -30rem;
-	&__title{
-		max-width: 650px;
-		margin: 0 auto 75px;
-	}
-	&__description{
-		max-width: 250px;
-		margin: 0 auto;
-	}
+.advantages {
+  position: relative;
+  margin-top: -140px;
+  padding-top: 420px;
+  padding-bottom: 200px;
+  background: url(../img/chain.png) no-repeat center 0/100% auto;
+
+  &__title {
+    max-width: 650px;
+    margin: 0 auto 90px;
+  }
+  &__description {
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }

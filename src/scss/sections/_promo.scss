@@ -1,8 +1,6 @@
 .promo {
-  background: url("../img/icons/lightning.svg") no-repeat -140px 90%/52% auto;
+  background: url(../img/icons/lightning.svg) no-repeat -16% 90%/ 52% auto;
   &__slide {
-    background: url("../img/strong-wet-woman-posing-during-jump.png") no-repeat
-      40px center/52% auto;
     padding-top: 90px;
     padding-bottom: 280px;
   }
@@ -10,6 +8,7 @@
     right: 21%;
     top: 12%;
     width: 25%;
+    left: inherit;
     @include media(max, 1380px) {
     }
   }

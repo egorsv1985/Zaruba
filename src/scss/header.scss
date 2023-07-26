@@ -14,39 +14,10 @@
         left: -25px;
         top: 0;
     }
-    &--map {
-      &::before {
-        
-        @include background(url("@img/icons/map.svg"));
-       
-        
-        
-      }
-    }
-    &--metro {
-      &::before {
     
-        @include background(url("@img/icons/metro.svg"));
-        @include wh(16px, 12px);
-      
-      }
-    }
-    &--time {
-      &::before {
-      
-        @include background(url("@img/icons/time.svg"));
-        
-     
-      }
-    }
-    &--tel {
-      &::before {
-        
-        @include background(url("@img/icons/tel.svg"));
-
-       
-      }
-    }
+    
+   
+    
   }
 
 

@@ -2,13 +2,15 @@
 .swiper-button-prev {
   z-index: 100;
   position: relative;
- 
+  background-color: #faed19;
   margin: 0;
- 
+  right: inherit;
+  left: inherit;
+
   @include wh(30px);
   transition: all 0.5s ease-in-out;
   &:hover {
-    background-color: #faed19;
+    background-color: #fff;
   }
   &::after {
     @include pseudo;
@@ -21,7 +23,7 @@
   height: auto;
 }
 
-.swiper-button-prev {
+.swiper-button-next {
   @include media(max, 1380px) {
   }
   @include media(max, sm) {
@@ -51,10 +53,9 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: 10%;
-    left: 6%;
+  bottom: 10%;
+  left: 6%;
 }
-
 
 .swiper-pagination-bullet {
   &-active {
@@ -62,9 +63,6 @@
   }
 }
 
-
-.swiper-control{
-	top: 50%;
-	right: 0;
-	left: 0;
-	width: 100%;}
+.swiper-control {
+  top: 50%;
+}

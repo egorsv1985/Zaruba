@@ -1,37 +1,31 @@
 .cards {
-	background: url("@img/hands.png") no-repeat 28% bottom / 730px 350px;
-	padding-bottom: 170px;
-  &::after,
-  &::before {
-    @include pseudo;
-    @include wh(100%);
-    position: absolute;
+  background: url(../img/hands.png) no-repeat 42% bottom/38% auto;
+    padding-bottom: 173px;
 
-    top: 0;
-    background-color: #fff;
-  }
-  &::after {
-    left: 99%;
-  }
-  &::before {
-    right: 99%;
-  }
   &__title {
-    max-width: 600px;
+    max-width: 585px;
     margin: 0 auto 70px;
   }
   &__item {
-    &--rotate {
+    &--active {
       transform: rotate(-15deg);
-      &>*{
-        transform: rotate(15deg);
-      }
     }
-
   }
   &__box {
     padding-top: 35px;
     padding-left: 35px;
     padding-right: 84px;
+  }
+  &__item{
+    &::before{
+      @include pseudo;
+      background: url("@img/icons/check-double.svg") no-repeat center / cover;
+      @include wh(24px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      
+
+    }
   }
 }
