@@ -1,15 +1,28 @@
 .promo {
-  background: url(../img/icons/lightning.svg) no-repeat -16% 90%/ 52% auto;
+  &__box {
+    &::before {
+      @include pseudo;
+      position: absolute;
+      background: url("@img/icons/lightning.svg") no-repeat center / auto 100%;
+      @include wh(52%, 88%);
+      top: 10%;
+      left: -7%;
+      z-index: -1;
+    }
+  }
+ 
+
   &__slide {
     padding-top: 90px;
     padding-bottom: 280px;
+    
   }
   .swiper-control {
-    right: 21%;
-    top: 12%;
-    width: 25%;
-    left: inherit;
+    
     @include media(max, 1380px) {
     }
+  }
+  .swiper__box-control{
+    top: 11%;
   }
 }

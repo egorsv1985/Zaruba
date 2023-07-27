@@ -26,7 +26,8 @@
   font-size: 64px;
 }
 .fs-70 {
-  font-size: 70px;
+  font-size:  clamp(1.88rem, 4.76vw + 0.8rem, 4.38rem); // 70px
+ 
 }
 .fs-83 {
   font-size: 83px;

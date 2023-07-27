@@ -1,60 +1,24 @@
 .footer {
-  &__btn{
-		&::before{
-			@include pseudo;
-			background: url("@img/icons/arrow-right.svg") no-repeat center / cover;
-			position: absolute;
-			right: 0;
-			top: 0;
-			@include wh(24px);
-		}
-	}
-  padding: 40px 0;
-
-  // .footer__social-list
-  &__social-list {
-    max-width: 60px;
-  }
-  // .footer__social-item
-  &__social-item {
-    @include wh(25px);
-
-   
-  }
-
-  // .footer__box
   &__box {
-    padding-left: 36px;
-    position: relative;
-    @include media(max, sm) {
-      padding-left: 0;
+    &::before,
+    &::after {
+      @include pseudo;
+      position: absolute;
     }
     &::before {
-      @include pseudo;
-      @include wh(15px);
-      position: absolute;
-      left: 0;
-      top: 30%;
-      transform: translateY(-50%);
-      @include media(max, sm) {
-        display: none;
-      }
-    }
-    &--map {
-      &::before {
-        @include background(url("@img/icons/map.svg"));
-      }
-    }
+      background: url("@img/portrait.png") no-repeat center / 100% auto;
+      @include wh(94%, 141%);
 
-    &--time {
-      &::before {
-        @include background(url("@img/icons/time.svg"));
-      }
+      z-index: 1;
+
+      top: -32%;
+      left: 43%;
     }
-    &--tel {
-      &::before {
-        @include background(url("@img/icons/tel.svg"));
-      }
+    &::after {
+      background: url("@img/icons/lightning.svg") no-repeat center / 100% auto;
+      @include wh(75%, 130%);
+      top: -30%;
+      right: -40%;
     }
   }
 }

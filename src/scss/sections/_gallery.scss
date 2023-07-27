@@ -1,23 +1,26 @@
 .gallery {
   padding-top: 330px;
   padding-bottom: 148px;
-  &::after,
-  &::before {
-    @include pseudo;
-    background: url(../img/cracks.png) no-repeat center/100% auto;
-    @include wh(450px, 676px);
-    transform: rotate(90deg);
-    position: absolute;
-
+  &__box{
+    &::after,
+    &::before {
+      @include pseudo;
+      background: url(../img/cracks.png) no-repeat center/100% auto;
+      @include wh(450px, 676px);
+      transform: rotate(90deg);
+      position: absolute;
+  
+    }
+    &::after {
+      right: -8%;
+      top: -2%;
+    }
+    &::before {
+      bottom: -23%;
+      left: -5%;
+    }
   }
-  &::after {
-    right: -8%;
-    top: -2%;
-  }
-  &::before {
-    bottom: -23%;
-    left: -5%;
-  }
+ 
   &__text {
     background: url("@img/icons/chat.svg") no-repeat center / 100% auto;
     bottom: 3%;
