@@ -1,10 +1,24 @@
 .community{
+	&::before{
+		@include pseudo;
+		background: url("@img/chain2.png") no-repeat center / cover;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 38%;
+	}
 	
 	padding-block: 130px;
 	&__text{
 		max-width: 350px;
 	}
-	&__bg{
-		background: url("@img/phone.png") no-repeat 35% 16% / 285px 271px;
+	&__box-bg{
+		position: absolute;
+		z-index: 1;
+		
+		
+		left: 25%;
+		top: -3%;
+	
 	}
 }

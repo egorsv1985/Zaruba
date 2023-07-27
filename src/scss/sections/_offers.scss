@@ -1,21 +1,28 @@
 .offers {
   padding-top: 200px;
   padding-bottom: 180px;
-
   &::after,
   &::before {
     @include pseudo;
-    @include wh(100%);
-    position: absolute;
+    background-image: url("@img/kiss.png");
+    background-repeat: no-repeat;
 
-    top: 0;
-    background-color: #fff;
+    position: absolute;
   }
   &::after {
-    left: 99%;
+    background-size: 150% 111%;
+    background-position: 130% 0%;
+    bottom: 6%;
+    right: -5%;
+
+    @include wh(459px, 536px);
   }
   &::before {
-    right: 99%;
+    background-size: 407% 164%;
+    background-position: 25% 0;
+    top: 0%;
+    left: 0%;
+    @include wh(257px, 480px);
   }
   &__title {
     max-width: 650px;

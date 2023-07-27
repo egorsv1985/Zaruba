@@ -34,31 +34,31 @@
     }
   }
   &__box-text {
-    &:nth-child(3) {
+    &--1 {
       left: 25%;
       top: 7%;
     }
-    &:nth-child(4) {
+    &--2 {
       left: 50%;
       top: 27%;
     }
-    &:nth-child(5) {
+    &--3 {
       left: 75%;
       top: 14%;
     }
-    &:nth-child(6) {
+    &--4 {
 		left: 33%;
 		bottom: 40%;
     }
-    &:nth-child(7) {
+    &--5 {
 		left: 58%;
 		bottom: 21%;
     }
-    &:nth-child(8) {
+    &--6 {
 		left: 42%;
 		bottom: 12%;
     }
-    &:nth-child(9) {
+    &--7 {
 		left: 8%;
 		bottom: 13%;
     }

@@ -2,21 +2,7 @@
   padding-top: 340px;
   padding-bottom: 180px;
 
-  &::after,
-  &::before {
-    @include pseudo;
-    @include wh(100%);
-    position: absolute;
-
-    top: 0;
-    background-color: #faed19;
-  }
-  &::after {
-    left: 99%;
-  }
-  &::before {
-    right: 99%;
-  }
+  
   &__box-text {
     padding: 120px 28px;
     max-width: 350px;
@@ -44,35 +30,35 @@
     width: 72%;
   }
   &__item {
-    &:nth-child(2) {
+    &--1 {
       top: 10%;
       left: -2%;
     }
-    &:nth-child(3) {
+    &--2 {
       top: 4%;
       left: 33%;
     }
-    &:nth-child(4) {
+    &--3 {
       top: 4%;
       left: 69%;
     }
-    &:nth-child(5) {
+    &--4 {
       top: 62%;
       left: 78%;
     }
-    &:nth-child(6) {
+    &--5 {
       top: 80%;
       left: 45%;
     }
-    &:nth-child(7) {
+    &--6 {
       top: 82%;
       left: 9%;
     }
-    &:nth-child(8) {
+    &--7 {
       top: 55%;
       left: 16%;
     }
-    &:nth-child(9) {
+    &--8 {
       top: 47%;
       left: -8%;
     }
@@ -83,7 +69,7 @@
   &__box-img {
     &--girl {
       top: 61%;
-      right: -5%;
+      right: 18%;
       transform: translateY(-50%);
     }
   }
