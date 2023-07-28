@@ -1,37 +1,148 @@
-.tickers{
-	
-    height: 3.125rem;
-    margin-bottom: 3.125rem;
-	position: relative;
-}
-.tickers .ticker {
+.tickers {
+  padding: 1px;
+  &::before {
+    content: "";
+    background: #fff;
     position: absolute;
-    top: 0;
+    top: -30%;
+    left: 0;
+    width: 110vw;
+    height: 17rem;
+    transform: rotate(-5deg);
+  }
+  &__box {
+    height: 4.375rem;
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    top: -20%;
     left: 50%;
-    width: 100vw;
-    height: 3.125rem;
-}
-.tickers .ticker1 {
-    z-index: 2;
-    background: #FAED19 url('@img/icons/tickers1.svg') 0 50% repeat-x;
-    transform: translateX(-50%) rotate(-5deg);
-	
-    animation: linebg1 2.5s linear infinite;
-}
-.tickers .ticker2 {
-    z-index: 1;
-    background: #fff url('@img/icons/tickers1.svg') 0 50% repeat-x;
-    
-    border-width: 1px 0;
-    transform: translateX(-50%) rotate(-11deg);
-    animation: linebg2 2.5s linear infinite;
+    width: 120vw;
+    height: 4.375rem;
+    z-index: 10;
+    background: #faed19 url("@img/icons/tickers1.svg") 0 50% repeat-x;
+    &1 {
+      transform: translateX(-50%) rotate(-5deg);
+      animation: linebg1 2.5s linear infinite;
+    }
+    &2 {
+      transform: translateX(-50%) rotate(-11deg);
+      animation: linebg2 2.5s linear infinite;
+    }
+  }
+  &__circle {
+    background-color: #faed19;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+    width: 15%;
+    position: absolute;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    top: 0%;
+
+    z-index: 10;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle1 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 19%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 6;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle2 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 25%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 5;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle3 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 33%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 4;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__box-circle {
+    width: 100%;
+    z-index: -2;
+    left: 0;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    &--top {
+      border-radius: 50% 50% 0 0;
+      background-color: #000;
+
+      top: 1px;
+
+      transform: rotate(5deg);
+    }
+    &--bottom {
+      border-radius: 0 0 50% 50%;
+      background-color: #fff;
+
+      top: 50%;
+    }
+  }
 }
 @keyframes linebg1 {
-	0% { background-position: 0 50%;}
-	100% { background-position: 313px 50%;}
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 313px 50%;
+  }
 }
 
 @keyframes linebg2 {
-	0% { background-position: 0 50%;}
-	100% { background-position: -313px 50%;}
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: -313px 50%;
+  }
 }

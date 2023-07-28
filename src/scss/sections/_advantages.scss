@@ -2,15 +2,24 @@
   position: relative;
   margin-top: -140px;
 
- 
   padding-top: clamp(12.5rem, 26.19vw + 6.61rem, 26.25rem); //420px
-  padding-bottom: 200px;
+  padding-bottom: 275px;
   background: url(../img/chain.png) no-repeat center 0/100% auto;
-  @include media (max, md) {
+  @include media(max, md) {
     margin-top: -100px;
-    
+ 
   }
-
+  &::before {
+    // content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 0;
+    //  height: 0;
+    //  border-left: 50vw solid transparent; /* Половина ширины окна браузера */
+    //  border-right: 50vw solid transparent; /* Половина ширины окна браузера */
+    //  border-bottom: 100px solid white;
+   }
   &__title {
     max-width: 650px;
     margin: 0 auto 90px;
