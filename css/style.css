@@ -533,20 +533,18 @@ body.popup-show::after {
   top: 50%;
 }
 
-.promo__box::before {
-  content: "";
-  display: block;
+.promo__box-lighting {
   position: absolute;
-  background: url("../img/icons/lightning.svg") no-repeat center/auto 100%;
-  width: 52%;
+  top: 11%;
+  right: 58%;
   height: 88%;
-  top: 10%;
-  left: -4%;
-  z-index: -1;
+  width: 100%;
+  z-index: -2;
 }
 .promo__slide {
   padding-top: 90px;
   padding-bottom: 280px;
+  overflow: hidden;
 }
 .promo .swiper__box-control {
   top: 11%;
@@ -554,12 +552,11 @@ body.popup-show::after {
 .promo .swiper__box-img {
   position: absolute;
   top: 0%;
-  right: 0%;
+  right: 49%;
   height: 100%;
   width: 100%;
   z-index: -1;
 }
-
 .img__chain {
   position: relative;
   left: 0;
