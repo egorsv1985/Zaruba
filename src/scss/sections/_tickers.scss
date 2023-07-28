@@ -1,0 +1,36 @@
+.tickers{
+	
+    height: 3.125rem;
+    margin-bottom: 3.125rem;
+}
+.tickers .ticker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 3.125rem;
+}
+.tickers .ticker1 {
+    z-index: 2;
+    background: #FAED19 url('@img/icons/tickers1.svg') 0 50% repeat-x;
+    transform: translateX(-50%) rotate(-5deg);
+	
+    animation: linebg1 2.5s linear infinite;
+}
+.tickers .ticker2 {
+    z-index: 1;
+    background: #fff url('@img/icons/tickers1.svg') 0 50% repeat-x;
+    
+    border-width: 1px 0;
+    transform: translateX(-50%) rotate(-11deg);
+    animation: linebg2 2.5s linear infinite;
+}
+@keyframes linebg1 {
+	0% { background-position: 0 50%;}
+	100% { background-position: 313px 50%;}
+}
+
+@keyframes linebg2 {
+	0% { background-position: 0 50%;}
+	100% { background-position: -313px 50%;}
+}

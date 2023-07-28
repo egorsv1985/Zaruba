@@ -1,66 +1,87 @@
 .kids {
-  padding-top: 340px;
-  padding-bottom: 180px;
+  padding: 1px;
 
   
-  &__box-text {
-    padding: 120px 28px;
-    max-width: 350px;
-    margin: 0 auto;
+  &__circle {
+    
+    width: 32%;
+    margin: 34%;
+    
+    &::after{
+      @include pseudo;
+      padding-top: 100%;
+    }
+  }
+  &__circle1 {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 83%;
+    transform: translate(-50%, -50%);
+    
+    &::after{
+      @include pseudo;
+      padding-top: 100%;
+    }
+  }
+  &__circle2 {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 63%;
+    transform: translate(-50%, -50%);
+    
+    &::after{
+      @include pseudo;
+      padding-top: 100%;
+    }
+  }
+  &__circle3 {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 45%;
+    transform: translate(-50%, -50%);
+    
+    &::after{
+      @include pseudo;
+      padding-top: 100%;
+    }
   }
   &__title {
     max-width: 300px;
     margin: 0 auto;
   }
-  &__circle {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    width: 83%;
-
-    margin: 0 auto;
-  }
-  &__circle1 {
-    height: 920px;
-  }
-  &__circle2 {
-    height: 700px;
-    width: 76%;
-  }
-  &__circle3 {
-    height: 500px;
-    width: 72%;
-  }
+ 
+ &__box-text{
+  transform: translate(-50%, -50%);
+ }
   &__item {
     &--1 {
-      top: 10%;
-      left: -2%;
+      top: 17%;
+      left: 9%;
     }
     &--2 {
-      top: 4%;
-      left: 33%;
+      top: 12%;
+      left: 35%;
     }
     &--3 {
-      top: 4%;
-      left: 69%;
+      top: 13%;
+      left: 68%;
     }
     &--4 {
-      top: 62%;
-      left: 78%;
+      top: 61%;
+    left: 81%;
     }
     &--5 {
-      top: 80%;
+      top: 86%;
       left: 45%;
     }
     &--6 {
-      top: 82%;
-      left: 9%;
+      top: 74%;
+      left: 15%;
     }
     &--7 {
-      top: 55%;
-      left: 16%;
+      top: 57%;
+      left: 25%;
     }
     &--8 {
       top: 47%;
-      left: -8%;
+      left: 2%;
     }
   }
   &__text {
@@ -68,9 +89,10 @@
   }
   &__box-img {
     &--girl {
-      top: 61%;
-      right: 18%;
-      transform: translateY(-50%);
+      top: 32%;
+      left: 54%;
+      
     }
   }
 }
+
