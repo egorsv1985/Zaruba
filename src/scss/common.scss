@@ -20,17 +20,20 @@
 }
 
 .fs-45 {
-  font-size: 45px;
+  font-size: clamp(1.56rem, 2.38vw + 1.03rem, 2.81rem);//45px
+  
 }
 .fs-64 {
-  font-size: 64px;
+  font-size: clamp(2.13rem, 3.57vw + 1.32rem, 4rem);//64px
+ 
 }
 .fs-70 {
   font-size:  clamp(1.88rem, 4.76vw + 0.8rem, 4.38rem); // 70px
  
 }
 .fs-83 {
-  font-size: 83px;
+  font-size: clamp(2.69rem, 4.76vw + 1.62rem, 5.19rem);
+  
 }
 .ls-7 {
   letter-spacing: 0.78px;
@@ -84,4 +87,37 @@
   background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
+  padding-right: 20px;
+}
+a:hover{
+  position: relative;
+      &::after{
+        content: "/";
+        display: block;
+        position: absolute;
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #FAED19;
+      }
+      &::before{
+        content: "/";
+        display: block;
+        position: absolute;
+        right: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #FAED19;
+      }
+}
+
+.btn:hover {
+  &::after, &::before{
+    display: none;
+
+  }
+
+  
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
 }

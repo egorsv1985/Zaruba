@@ -5,7 +5,8 @@
     margin-bottom: 80px;
   }
   &__text {
-    top: 200px;
+    top: 100%;
+    transform: translateX(-50%);
   }
   &__item {
    &:nth-child(even){

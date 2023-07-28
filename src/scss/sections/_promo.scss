@@ -1,40 +1,41 @@
 .promo {
-  &__box-lighting
-   {
+  &__box-lighting {
     position: absolute;
     top: 11%;
     right: 58%;
     height: 88%;
     width: 100%;
     z-index: -2;
+    @include media(max, md) {
+      right: 30%;
+    }
+    @include media(max, sm) {
+      right: 0%;
+    }
   }
- 
 
   &__slide {
     padding-top: 90px;
     padding-bottom: 280px;
     overflow: hidden;
-    
   }
-  .swiper-control {
-    
-    @include media(max, 1380px) {
-    }
-  }
-  .swiper__box-control{
+  
+  .swiper__box-control {
     top: 11%;
   }
-.swiper__box-img{
-  position: absolute;
-  top: 0%;
-  right: 49%;
-  height: 100%;
-  
-  
-  width: 100%;
-  z-index: -1;
-}
-.swiper{
- 
-}
+  .swiper__box-img {
+    position: absolute;
+    top: 0%;
+    right: 49%;
+    height: 100%;
+
+    width: 100%;
+    z-index: -1;
+    @include media(max, md) {
+      right: 30%;
+    }
+    @include media(max, sm) {
+      right: 0%;
+    }
+  }
 }

@@ -1,20 +1,19 @@
-<section class="offers bg-white " id="offers">
+<section class="offers bg-white" id="offers">
   <div class="container position-relative offers__box">
     <div
       class="fs-45 fw-900 fst-italic text-uppercase lh-12 text-center mb-5 text-black offers__title"
     >
       зАБЕРИ СВОЕ СУПЕР ПРЕДЛОЖЕНИЕ
     </div>
-
-    <div class="swiper offersSwiper position-relative">
-      <div class="swiper-control w-100">
-        <div
-          class="container position-absolute d-flex justify-content-between top-50 align-items-center"
-        >
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+    <div class="swiper-control w-100">
+      <div
+        class="container position-absolute d-flex justify-content-between top-50 align-items-center"
+      >
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
+    </div>
+    <div class="swiper offersSwiper position-relative">
       <div class="swiper-wrapper">
         <div class="swiper-slide offers__slide">
           <div class="offers__box-img mb-4">
@@ -171,7 +170,7 @@
   // Создаем новый Swiper объект для элемента ".offersSwiper"
   var offersSwiper = new Swiper(".offersSwiper", {
     // Задаем количество слайдов, которые будут показываться одновременно
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     // Включаем курсор в виде "руки" при наведении на слайды
@@ -180,7 +179,18 @@
     keyboard: {
       enabled: true,
     },
+    // Добавляем объект breakpoints для различных медиазапросов
+    breakpoints: {
+      // Когда ширина окна >= 992px
+      992: {
+        slidesPerView: 3,
+      },
 
+      // Когда ширина окна >= 576px
+      576: {
+        slidesPerView: 2,
+      },
+    },
     // Включаем кнопки "вперед" и "назад" для навигации по слайдам
     navigation: {
       nextEl: ".offers .swiper-button-next",

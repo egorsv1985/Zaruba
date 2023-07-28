@@ -1,9 +1,15 @@
 .advantages {
   position: relative;
   margin-top: -140px;
-  padding-top: 420px;
+
+ 
+  padding-top: clamp(12.5rem, 26.19vw + 6.61rem, 26.25rem); //420px
   padding-bottom: 200px;
   background: url(../img/chain.png) no-repeat center 0/100% auto;
+  @include media (max, md) {
+    margin-top: -100px;
+    
+  }
 
   &__title {
     max-width: 650px;

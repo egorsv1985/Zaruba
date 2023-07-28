@@ -24,19 +24,25 @@
 }
 
 .swiper-button-next {
-  @include media(max, 1380px) {
-  }
+  right: -9%;
+  
   @include media(max, sm) {
   }
   &::after {
     transform: rotate(180deg);
   }
 }
-
-.swiper-button-next {
-  @include media(max, 1380px) {
+.swiper-button-prev {
+  left: -9%;
+  
+  @include media(max, sm) {
+  }
+  &::after {
+    
   }
 }
+
+
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
@@ -49,12 +55,7 @@
   }
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  
-}
+
 
 .swiper-pagination-bullet {
   &-active {
