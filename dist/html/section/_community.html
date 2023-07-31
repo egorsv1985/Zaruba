@@ -1,0 +1,108 @@
+<section class="community position-relative" id="community">
+	<div class="container">
+		<div class="row py-5 position-relative mb-3 ">
+			<div class="col-12 col-md-5">
+				<div class="d-flex flex-column"></div>
+				<div class="fs-83 fw-900 fst-italic text-uppercase lh-12">ZARUBA</div>
+				<div class="fs-16 fw-700 fst-italic">
+					<a href="#">@ZARUBAFITNESS_PODOLSK</a>
+				</div>
+			</div>
+			<div class="col-12 col-md-7">
+				<div class="community__text fs-24 fst-italic fw-700 ms-auto">
+					Нас выбрали уже 2560 человек, будь следующим
+				</div>
+				<div class="fs-83 fw-900 fst-italic text-uppercase lh-12">
+					COMMUNITY
+				</div>
+			</div>
+			<div class="community__box-bg">
+				<img src="img/phone.png" alt="COMMUNITY" class="community__bg mw-100 h-auto" width="285" height="271" />
+			</div>
+		</div>
+		<div class="row position-relative">
+			<div class="swiper-control w-100">
+				<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="swiper communitySwiper position-relative">
+
+				<div class="swiper-wrapper">
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community1.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community2.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community3.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community1.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community2.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community3.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+					<div class="swiper-slide community__slide">
+						<div class="community__box-img">
+							<img src="img/community1.png" alt="Сообщество" class="w-100 h-auto d-block" width="255" height="550" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+<script>
+	// Создаем новый Swiper объект для элемента ".communitySwiper"
+	var communitySwiper = new Swiper(".communitySwiper", {
+		// Задаем количество слайдов, которые будут показываться одновременно
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		// Включаем курсор в виде "руки" при наведении на слайды
+		grabCursor: true,
+		// Включаем использование клавиатуры для навигации по слайдам
+		keyboard: {
+			enabled: true,
+		},
+		// Добавляем объект breakpoints для различных медиазапросов
+		breakpoints: {
+			// Когда ширина окна >= 992px
+			992: {
+				slidesPerView: 4,
+			},
+			// Когда ширина окна >= 768px
+			768: {
+				slidesPerView: 3,
+			},
+			// Когда ширина окна >= 576px
+			576: {
+				slidesPerView: 2,
+			},
+		},
+		// Включаем кнопки "вперед" и "назад" для навигации по слайдам
+		navigation: {
+			nextEl: ".community .swiper-button-next",
+			prevEl: ".community .swiper-button-prev",
+		},
+	});
+</script>
