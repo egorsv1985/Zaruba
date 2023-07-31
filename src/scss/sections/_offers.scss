@@ -1,6 +1,35 @@
 .offers {
-  padding-top: 200px;
-  padding-bottom: 180px;
+  padding-top: 210px;
+  padding-bottom: 275px;
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    top: -1%;
+    right: 0;
+    left: -12%;
+    border-right: 0rem solid transparent;
+    border-left: 300rem solid transparent;
+    border-top: 20rem solid #000;
+  }
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+right: 0;
+    bottom: -1%;
+    left: 0;
+    border-left: 0 solid transparent;
+    border-right: 185rem solid transparent;
+    border-bottom: 9rem solid #000;
+  }
   &__box {
     &::after,
     &::before {
@@ -12,9 +41,9 @@
     }
     &::after {
       background-size: 175% 112%;
-    background-position: 100% 0%;
-    bottom: -9%;
-    right: -30%;
+      background-position: 100% 0%;
+      bottom: -9%;
+      right: -30%;
 
       @include wh(459px, 536px);
     }
@@ -22,7 +51,7 @@
       background-size: 407% 164%;
       background-position: 25% 0;
       top: -30%;
-    left: -22%;
+      left: -22%;
       @include wh(257px, 480px);
     }
   }

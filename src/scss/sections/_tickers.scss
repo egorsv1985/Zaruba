@@ -1,4 +1,4 @@
-.tickers {
+.tickers1 {
   padding: 1px;
   &::before {
     content: "";
@@ -16,19 +16,25 @@
   }
   &__item {
     position: absolute;
-    top: -20%;
-    left: 50%;
+
     width: 120vw;
     height: 4.375rem;
-    z-index: 10;
-    background: #faed19 url("@img/icons/tickers1.svg") 0 50% repeat-x;
+
     &1 {
       transform: translateX(-50%) rotate(-5deg);
+      background: #faed19 url("@img/icons/tickers1.svg") 0% 50% repeat-x;
       animation: linebg1 2.5s linear infinite;
+      z-index: 11;
+      top: -20%;
+      left: 50%;
     }
     &2 {
-      transform: translateX(-50%) rotate(-11deg);
+      transform: translateX(-50%) rotate(-12deg);
+      background: #f5f5f5 url("@img/icons/tickers1.svg") 0% 50% repeat-x;
       animation: linebg2 2.5s linear infinite;
+      z-index: 10;
+      top: 25%;
+      left: 50%;
     }
   }
   &__circle {
@@ -40,7 +46,7 @@
     transform: translate(-50%, -50%);
     top: 0%;
 
-    z-index: 10;
+    z-index: 11;
     &::after {
       content: "";
       display: block;
@@ -88,8 +94,8 @@
   &__circle3 {
     padding: 1px;
     background: linear-gradient(
-      rgb(250, 237, 25),
-      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0),
+      rgba(255, 237, 0, 1),
       rgba(255, 255, 255, 0)
     );
     width: 33%;
@@ -129,20 +135,294 @@
     }
   }
 }
+.tickers2 {
+  padding: 1px;
+  &::before {
+    content: "";
+    background: #faed19;
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 110vw;
+    height: 17rem;
+    transform: rotate(-5deg);
+  }
+  &__box {
+    height: 4.375rem;
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+
+    width: 120vw;
+    height: 4.375rem;
+
+    &1 {
+      transform: translateX(-50%) rotate(6deg);
+      background: #fff url("@img/icons/tickers1.svg") 0% 50% repeat-x;
+      animation: linebg1 2.5s linear infinite;
+      z-index: 11;
+      top: -105%;
+      left: 50%;
+    }
+    &2 {
+      transform: translateX(-50%) rotate(-5deg);
+      background: #000 url("@img/icons/tickers2.svg") 0% 50% repeat-x;
+      animation: linebg2 2.5s linear infinite;
+      z-index: 10;
+      top: -36%;
+      left: 50%;
+    }
+  }
+  &__circle {
+    background-color: #faed19;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+    width: 15%;
+    position: absolute;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    top: 0%;
+
+    z-index: 11;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle1 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 19%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 6;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle2 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 25%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 5;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle3 {
+    padding: 1px;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 237, 0, 1),
+      rgba(255, 255, 255, 0)
+    );
+    width: 33%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 4;
+    top: 0%;
+    left: 65%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__box-circle {
+    width: 100%;
+    z-index: -2;
+    left: 0;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    &--top {
+      border-radius: 50% 50% 0 0;
+      background-color: #000;
+
+      top: 1px;
+
+      transform: rotate(5deg);
+    }
+    &--bottom {
+      border-radius: 0 0 50% 50%;
+      background-color: #faed19;
+
+      top: 50%;
+    }
+  }
+}
+.tickers3 {
+  padding: 1px;
+  &::before {
+    content: "";
+    background: #000;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 110vw;
+    height: 17rem;
+    transform: rotate(-2deg);
+  }
+  &__box {
+    height: 4.375rem;
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+
+    width: 120vw;
+    height: 4.375rem;
+
+    &1 {
+      transform: translateX(-50%) rotate(6deg);
+      background: #fff url("@img/icons/tickers1.svg") 0% 50% repeat-x;
+      animation: linebg1 2.5s linear infinite;
+      z-index: 11;
+      top: 14%;
+      left: 50%;
+    }
+    &2 {
+      transform: translateX(-50%) rotate(-3deg);
+      background: #000 url("@img/icons/tickers2.svg") 0% 50% repeat-x;
+      animation: linebg2 2.5s linear infinite;
+      z-index: 10;
+      top: -75%;
+      left: 50%;
+    }
+  }
+  &__circle {
+    background-color: #faed19;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+    width: 15%;
+    position: absolute;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    top: 0%;
+
+    z-index: 11;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle1 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 19%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 6;
+    top: 0%;
+    left: 35%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle2 {
+    padding: 1px;
+    background: linear-gradient(
+      rgb(250, 237, 25),
+      rgb(245, 245, 245),
+      rgba(255, 255, 255, 0)
+    );
+    width: 25%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 5;
+    top: 0%;
+    left: 35%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__circle3 {
+    padding: 1px;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 237, 0, 1),
+      rgba(255, 255, 255, 0)
+    );
+    width: 33%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    overflow: hidden;
+    z-index: 4;
+    top: 0%;
+    left: 35%;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__box-circle {
+    width: 100%;
+    z-index: -2;
+    left: 0;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    &--top {
+      border-radius: 50% 50% 0 0;
+      background-color: #FAED19;
+
+      top: 1px;
+
+      transform: rotate(5deg);
+    }
+    &--bottom {
+      border-radius: 0 0 50% 50%;
+      background-color: #000;
+
+      top: 50%;
+    }
+  }
+}
+
 @keyframes linebg1 {
   0% {
     background-position: 0 50%;
   }
   100% {
-    background-position: 313px 50%;
+    background-position: 10% 50%;
   }
 }
-
 @keyframes linebg2 {
   0% {
     background-position: 0 50%;
   }
   100% {
-    background-position: -313px 50%;
+    background-position: -10% 50%;
   }
 }

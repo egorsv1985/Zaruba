@@ -1,6 +1,8 @@
 .kids {
-  padding: 1px;
-
+  padding: 100px 1px 130px;
+&__box{
+  z-index: 12;
+}
   
   &__circle {
     
@@ -68,7 +70,7 @@
     left: 81%;
     }
     &--5 {
-      top: 86%;
+      top: 75%;
       left: 45%;
     }
     &--6 {
