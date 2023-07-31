@@ -22,14 +22,15 @@
 
 		<!-- Содержимое каждой вкладки -->
 		<div class="tab-content" id="teamsTabContent">
-			<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-				<div class="swiper teamsSwiper position-relative">
-					<div class="swiper-control w-100">
-						<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
+			<div class="tab-pane fade show active position-relative" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+				<div class="swiper-control w-100">
+					<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
+				</div>
+				<div class="swiper teamsSwiper position-relative">
+
 					<div class="swiper-wrapper">
 						<div class="swiper-slide teams__slide">
 							<div class="teams__box-img mb-4">
@@ -111,14 +112,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-				<div class="swiper teamsSwiper position-relative">
-					<div class="swiper-control w-100">
-						<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
+			<div class="tab-pane fade position-relative" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+				<div class="swiper-control w-100">
+					<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
+				</div>
+				<div class="swiper teamsSwiper position-relative">
+
 					<div class="swiper-wrapper">
 						<div class="swiper-slide teams__slide">
 							<div class="teams__box-img mb-4">
@@ -200,14 +202,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-				<div class="swiper teamsSwiper position-relative">
-					<div class="swiper-control w-100">
-						<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
+			<div class="tab-pane fade position-relative" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+				<div class="swiper-control w-100">
+					<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
+				</div>
+				<div class="swiper teamsSwiper position-relative">
+
 					<div class="swiper-wrapper">
 						<div class="swiper-slide teams__slide">
 							<div class="teams__box-img mb-4">
@@ -289,14 +292,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-				<div class="swiper teamsSwiper position-relative">
-					<div class="swiper-control w-100">
-						<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
+			<div class="tab-pane fade position-relative" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+				<div class="swiper-control w-100">
+					<div class="container position-absolute d-flex justify-content-between top-50 align-items-center">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
+				</div>
+				<div class="swiper teamsSwiper position-relative">
+
 					<div class="swiper-wrapper">
 						<div class="swiper-slide teams__slide">
 							<div class="teams__box-img mb-4">
@@ -385,7 +389,7 @@
 	// Создаем новый Swiper объект для элемента ".teamsSwiper"
 	var teamsSwiper = new Swiper(".teamsSwiper", {
 		// Задаем количество слайдов, которые будут показываться одновременно
-		slidesPerView: 4,
+		slidesPerView: 1,
 		spaceBetween: 30,
 		loop: true,
 		// Включаем курсор в виде "руки" при наведении на слайды
@@ -399,6 +403,21 @@
 		navigation: {
 			nextEl: ".teams .swiper-button-next",
 			prevEl: ".teams .swiper-button-prev",
+		},
+		// Добавляем объект breakpoints для различных медиазапросов
+		breakpoints: {
+			// Когда ширина окна >= 992px
+			992: {
+				slidesPerView: 4,
+			},
+			// Когда ширина окна >= 768px
+			768: {
+				slidesPerView: 3,
+			},
+			// Когда ширина окна >= 576px
+			576: {
+				slidesPerView: 2,
+			},
 		},
 	});
 </script>
