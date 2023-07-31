@@ -3,7 +3,7 @@
   
   
  
-  &__item {
+  &__link {
    
     &--vk {
       background: url("@img/icons/vk.svg") no-repeat 0 center / auto;
@@ -15,6 +15,5 @@
       background: url("../img/icons/whatsapp.svg") no-repeat 0 center / auto;
     }
   }
-  &__link {
-  }
+  
 }
