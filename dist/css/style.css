@@ -148,6 +148,10 @@
   left: 30px;
 }
 
+.form-group:focus-within label {
+  display: none;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -1075,7 +1079,7 @@ body.popup-show::after {
     background-position: 0 50%;
   }
   100% {
-    background-position: 10% 50%;
+    background-position: 498px 50%;
   }
 }
 @keyframes linebg2 {
@@ -1083,7 +1087,7 @@ body.popup-show::after {
     background-position: 0 50%;
   }
   100% {
-    background-position: -10% 50%;
+    background-position: -498px 50%;
   }
 }
 .gallery {

@@ -143,3 +143,6 @@
   transform: translateY(-50%);
   left: 30px;
 }
+.form-group:focus-within label{
+  display: none;
+}
