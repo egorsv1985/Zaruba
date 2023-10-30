@@ -147,6 +147,9 @@
 	transform: translateY(-50%);
 	left: 30px;
 }
+.form-file{
+	transform: translateY(0);
+}
 .accordion {
     --bs-accordion-color: #212529;
     --bs-accordion-bg: transparent;
@@ -1871,13 +1874,14 @@ img { pointer-events: none; }
 }
 .form__label--bg {
 	width: 50px;
+	min-width: 50px;
 	height: 50px;
 	display: block;
 	background: url("img/icons/download.svg") no-repeat center/15px;
   }
   .form-file{
 	cursor: pointer;
-	margin-top: 30px;
+	column-gap: 16px;
   }
    .form__checkbox {	
 	

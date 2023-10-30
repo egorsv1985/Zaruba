@@ -19,7 +19,7 @@ if (!empty($arResult["ERRORS"])) : ?>
 if ($arResult["MESSAGE"] <> '') : ?>
 	<? ShowNote($arResult["MESSAGE"]) ?>
 <? endif ?>
-<form name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" class="promo__form form px-5">
+<form name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" class="promo__form form px-sm-5">
 	<input type="hidden" name="FormName" value="<?= $arParams["FORM_NAME"] ?>" />
 	<div class="row gy-1">
 		<?= bitrix_sessid_post() ?>
@@ -212,7 +212,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 								$value = intval($propertyID) > 0 ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE"] : $arResult["ELEMENT"][$propertyID];
 							?>
 								<input type="hidden" name="PROPERTY[<?= $propertyID ?>][<?= $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] : $i ?>]" value="<?= $value ?>" />
-								<label for="PROPERTY_FILE_<?= $propertyID ?>_<?= $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] : $i ?>" class="form-label form-file form__label fs-16 d-flex align-items-center h-100 text-nowrap w-100 gap-3">
+								<label for="PROPERTY_FILE_<?= $propertyID ?>_<?= $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] : $i ?>" class="form-label form-file form__label fs-16 d-flex flex-wrap align-items-center h-100 text-nowrap w-100 gx-3">
 									<span class="form__label--bg ps-4 rounded-circle border border-white"></span>
 									<span>Прикрепить файл (.doc, .pdf)</span>
 								</label>
@@ -220,17 +220,17 @@ if ($arResult["MESSAGE"] <> '') : ?>
 								<?
 								if (!empty($value) && is_array($arResult["ELEMENT_FILES"][$value])) {
 								?>
-									<input type="checkbox" name="DELETE_FILE[<?= $propertyID ?>][<?= $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] : $i ?>]" id="file_delete_<?= $propertyID ?>_<?= $i ?>" value="Y" /><label for="file_delete_<?= $propertyID ?>_<?= $i ?>"><?= GetMessage("IBLOCK_FORM_FILE_DELETE") ?></label><br />
+									<input type="checkbox" name="DELETE_FILE[<?= $propertyID ?>][<?= $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] ? $arResult["ELEMENT_PROPERTIES"][$propertyID][$i]["VALUE_ID"] : $i ?>]" id="file_delete_<?= $propertyID ?>_<?= $i ?>" value="Y" /><label for="file_delete_<?= $propertyID ?>_<?= $i ?>"><?= GetMessage("IBLOCK_FORM_FILE_DELETE") ?></label>
 									<?
 									if ($arResult["ELEMENT_FILES"][$value]["IS_IMAGE"]) {
 									?>
-										<img src="<?= $arResult["ELEMENT_FILES"][$value]["SRC"] ?>" height="<?= $arResult["ELEMENT_FILES"][$value]["HEIGHT"] ?>" width="<?= $arResult["ELEMENT_FILES"][$value]["WIDTH"] ?>" border="0" /><br />
+										<img src="<?= $arResult["ELEMENT_FILES"][$value]["SRC"] ?>" height="<?= $arResult["ELEMENT_FILES"][$value]["HEIGHT"] ?>" width="<?= $arResult["ELEMENT_FILES"][$value]["WIDTH"] ?>" border="0" />
 									<?
 									} else {
 									?>
-										<?= GetMessage("IBLOCK_FORM_FILE_NAME") ?>: <?= $arResult["ELEMENT_FILES"][$value]["ORIGINAL_NAME"] ?><br />
-										<?= GetMessage("IBLOCK_FORM_FILE_SIZE") ?>: <?= $arResult["ELEMENT_FILES"][$value]["FILE_SIZE"] ?> b<br />
-										[<a href="<?= $arResult["ELEMENT_FILES"][$value]["SRC"] ?>"><?= GetMessage("IBLOCK_FORM_FILE_DOWNLOAD") ?></a>]<br />
+										<?= GetMessage("IBLOCK_FORM_FILE_NAME") ?>: <?= $arResult["ELEMENT_FILES"][$value]["ORIGINAL_NAME"] ?>
+										<?= GetMessage("IBLOCK_FORM_FILE_SIZE") ?>: <?= $arResult["ELEMENT_FILES"][$value]["FILE_SIZE"] ?> b
+										[<a href="<?= $arResult["ELEMENT_FILES"][$value]["SRC"] ?>"><?= GetMessage("IBLOCK_FORM_FILE_DOWNLOAD") ?></a>]
 									<?
 									}
 								}
@@ -305,7 +305,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 				<input type="text" name="captcha_word" maxlength="50" value="">
 			<? endif ?>
 		<? endif ?>
-		<div class="col-12 col-md-12 mt-0">
+		<div class="col-12 col-md-12 mt-4">
 			<button type="submit" name="iblock_submit" class="btn fs-20 fw-800 px-3 py-3 btn-primary rounded-0 w-100 skew-btn mb-2" value="<?= GetMessage("IBLOCK_FORM_SUBMIT") ?>">
 				<span>ОТКЛИКНУТСЯ!</span>
 			</button>

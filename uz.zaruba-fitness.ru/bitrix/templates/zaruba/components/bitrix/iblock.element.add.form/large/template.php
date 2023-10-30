@@ -19,7 +19,7 @@ if (!empty($arResult["ERRORS"])) : ?>
 if ($arResult["MESSAGE"] <> '') : ?>
 	<? ShowNote($arResult["MESSAGE"]) ?>
 <? endif ?>
-<form name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" class="promo__form form px-5">
+<form name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" class="promo__form form px-sm-5">
 	<input type="hidden" name="FormName" value="<?= $arParams["FORM_NAME"] ?>">
 	<div class="row gy-2">
 		<div class="col-12 col-md-12">

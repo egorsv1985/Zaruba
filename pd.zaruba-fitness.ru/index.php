@@ -413,7 +413,7 @@ $APPLICATION->IncludeComponent(
 	),
 	false
 );
-if ($_SERVER['REMOTE_ADDR'] === '185.128.203.136') {
+// if ($_SERVER['REMOTE_ADDR'] === '185.128.203.136') {
 	$APPLICATION->IncludeComponent(
 		"bitrix:news.list",
 		"vacancies",
@@ -448,7 +448,7 @@ if ($_SERVER['REMOTE_ADDR'] === '185.128.203.136') {
 		),
 		false
 	);
-}
+// }
 
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
