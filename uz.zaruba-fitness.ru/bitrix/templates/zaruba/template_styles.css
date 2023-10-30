@@ -431,6 +431,7 @@ color: #fff;
 	.btn--enter {
 		background-position: 20px center;
 	}
+	
 }
 .btn--enter span {
 	transform: none;
@@ -604,7 +605,7 @@ body.popup-show::after {
 	margin: 0;
 	right: inherit;
 	left: inherit;
-	width: 30px;
+	min-width: 30px;
 	height: 30px;
 	transition: all 0.5s ease;
 }
@@ -639,6 +640,7 @@ button[aria-expanded="true"] .vacancies__box::after{
 .vacancies ul li {
 	list-style: disc;
 }
+
 .card__btn::before{
   content: "";
   display: block;
@@ -723,6 +725,10 @@ button[aria-expanded="true"] .vacancies__box::after{
 	.promo__box-lighting {
 		right: 0%;
 	}
+	.card__btn{
+		max-width: 270px;
+	}
+	
 }
 .promo__slide {
 	height: 100%;
@@ -1883,10 +1889,7 @@ img { pointer-events: none; }
 	cursor: pointer;
 	column-gap: 16px;
   }
-   .form__checkbox {	
-	
-	
-  }
+ 
    .checkbox__input {
 	display: none;
   }
