@@ -48,7 +48,7 @@
 	--bs-primary: #000;
 	--bs-secondary: #fff;
 	--bs-success: #faed19;
-	--bs-info: #0dcaf0;
+	--bs-info: #8E8D88;
 	--bs-warning: #faed19;
 	--bs-danger: #dc3545;
 	--bs-light: #f8f9fa;
@@ -629,6 +629,24 @@ button[aria-expanded="true"] .vacancies__box {
 button[aria-expanded="true"] .vacancies__box::after{
 	transform: rotate(270deg);
 	transition: all .5s ease-in-out;
+}
+.vacancies__btn{
+	max-width: 290px;
+}
+.vacancies ul li {
+	list-style: disc;
+}
+.card__btn::before{
+  content: "";
+  display: block;
+  background-color: #FAED19;
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .swiper-slide {
 	height: auto;
@@ -1705,6 +1723,9 @@ button[aria-expanded="true"] .vacancies__box::after{
 		left: 0;
 		z-index: 10;
 	}
+	.vacancies ul:last-of-type {
+		margin-bottom: 0;
+	}
 }
 .header__menu ul ul {
 	position: absolute;
@@ -1848,7 +1869,61 @@ img { pointer-events: none; }
 .form__input:valid ~ .form__label {
 	display: none;
 }
-
+.form__label--bg {
+	width: 50px;
+	height: 50px;
+	display: block;
+	background: url("img/icons/download.svg") no-repeat center/15px;
+  }
+  .form-file{
+	cursor: pointer;
+	margin-top: 30px;
+  }
+   .form__checkbox {	
+	
+	
+  }
+   .checkbox__input {
+	display: none;
+  }
+   .checkbox__label {
+	display: flex;
+	flex-direction: row-reverse;
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
+  }
+   .checkbox__label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 11px;
+	height: 8px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url("img/icons/check.svg");
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+  }
+   .checkbox__label::after {
+	content: "";
+	align-self: flex-start;
+	flex: 0 0 20px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #FAED19;
+	background-color: #000;
+	margin-right: 0.625rem;
+  }
+   .checkbox__text {
+	
+  }
+   .checkbox__input:checked + .checkbox__label::before {
+	opacity: 1;
+  }
 .wrapper-iframe {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
